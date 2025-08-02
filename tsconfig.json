@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "esnext",
     "moduleResolution": "nodenext",
+    "rewriteRelativeImportExtensions": true,
     "declaration": true,
     "outDir": "./lib",
     "strict": true
