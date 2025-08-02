@@ -1,11 +1,11 @@
-import MessageBus from "../messages/MessageBus";
+import MessageBus from "../messages/MessageBus.js";
 import {
   ImageAssetType,
   ImageDownload,
   ImageUpload,
   SceneDownload,
   SceneUpload,
-} from "../types";
+} from "../types/index.js";
 
 class AssetsApi {
   private messageBus: MessageBus;

@@ -1,6 +1,6 @@
 import { enablePatches, produceWithPatches } from "immer";
-import MessageBus from "../messages/MessageBus";
-import { Item } from "../types";
+import MessageBus from "../messages/MessageBus.js";
+import { Item } from "../types/index.js";
 import {
   DispatchInteractionUpdate,
   InteractionManager,

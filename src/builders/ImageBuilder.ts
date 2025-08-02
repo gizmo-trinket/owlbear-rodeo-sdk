@@ -1,5 +1,5 @@
-import { ImageContent } from "../types/items/ImageContent";
-import { ImageGrid } from "../types/items/ImageGrid";
+import { ImageContent } from "../types/items/ImageContent.js";
+import { ImageGrid } from "../types/items/ImageGrid.js";
 import {
   RichText,
   TextContent,
@@ -7,9 +7,9 @@ import {
   TextItemType,
   TextSize,
 } from "../types/items/TextContent";
-import { Image } from "../types/items/Image";
-import { GenericItemBuilder } from "./GenericItemBuilder";
-import PlayerApi from "../api/PlayerApi";
+import { Image } from "../types/items/Image.js";
+import { GenericItemBuilder } from "./GenericItemBuilder.js";
+import PlayerApi from "../api/PlayerApi.js";
 
 export class ImageBuilder extends GenericItemBuilder<ImageBuilder> {
   private _image: ImageContent;
