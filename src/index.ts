@@ -164,6 +164,8 @@ export {
   buildWall,
   buildImageUpload,
   buildSceneUpload,
+  getDetails,
+  MessageBus
 };
 
 export default OBR;
