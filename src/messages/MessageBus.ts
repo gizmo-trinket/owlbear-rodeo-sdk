@@ -32,6 +32,7 @@ class MessageBus extends EventEmitter {
       // Handle the ready event
       if (message.id === "OBR_READY") {
         this.ready = true;
+        console.log("READY!");
         const data = message.data as { userId: string; ref: string };
         this.ref = data.ref;
         this.userId = data.userId;
