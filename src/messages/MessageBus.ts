@@ -40,7 +40,6 @@ class MessageBus extends EventEmitter {
       this.emit(message.id, message.data);
     }
   }
-};
 
   /**
    * @param nonce
@@ -109,6 +108,6 @@ class MessageBus extends EventEmitter {
         : []),
     ]);
   };
-}
+};
 
 export default MessageBus;
