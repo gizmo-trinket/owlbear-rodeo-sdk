@@ -28,15 +28,15 @@ class MessageBus extends EventEmitter {
   private handleMessage = (event: MessageEvent<unknown>) => {
     const message = event.data;
     // Ensure the message is meant for us and check that it is formatted correctly
-    if (event.origin === this.targetOrigin && isMessage(message)) {
-      this.emit(message.id, message.data);
-    }
-    else if (!this.ready && isMessage(message) && message.id === "OBR_READY") {
+
+    if (!this.ready && isMessage(message) && message.id === "OBR_READY") {
       // Handle the ready event
       this.ready = true;
       const data = message.data as { userId: string; ref: string };
       this.ref = data.ref;
       this.userId = data.userId;
+      this.emit(message.id, message.data);
+    } else if (event.origin === this.targetOrigin && isMessage(message)) {
       this.emit(message.id, message.data);
     }
   }
