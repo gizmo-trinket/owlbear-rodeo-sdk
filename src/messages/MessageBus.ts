@@ -31,12 +31,14 @@ class MessageBus extends EventEmitter {
 
     if (!this.ready && isMessage(message) && message.id === "OBR_READY") {
       // Handle the ready event
+      console.info("Handling OBR_READY")
       this.ready = true;
       const data = message.data as { userId: string; ref: string };
       this.ref = data.ref;
       this.userId = data.userId;
       this.emit(message.id, message.data);
     } else if (event.origin === this.targetOrigin && isMessage(message)) {
+      console.info("Handling OTHER")
       this.emit(message.id, message.data);
     }
   }
